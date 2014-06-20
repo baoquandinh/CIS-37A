@@ -1,6 +1,10 @@
 /* 
  * File:   main.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Due Date:
+ * System Used: MAC OSX
+ * Algorithm: Prompt user to enter input. Input will be calculated and check
+ * if the BMI is under, normal, above, or super above the normal weight limit.
  *
  * Created on June 17, 2014, 10:36 AM
  */

@@ -1,6 +1,10 @@
 /* 
  * File:   main.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Due Date:
+ * System Used: MAC OSX
+ * Algorithm: Create a loop for line that will create 10 lines. On each line
+ * there is another loop that will figure out the squre and cube of a number
  *
  * Created on June 17, 2014, 10:15 AM
  */
