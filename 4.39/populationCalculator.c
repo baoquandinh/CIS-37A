@@ -41,8 +41,7 @@ int main(int argc, char** argv) {
         //Third column printed is the population at the end of current year
         if(year == 2014) //Sets the population to the initial value
         {
-            originalPopulation = initialWorldPopulation;
-           // currentYearPopulation = initialWorldPopulation;
+            originalPopulation = initialWorldPopulation;        
         }
         else
         {
