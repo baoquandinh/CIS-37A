@@ -1,6 +1,13 @@
 /* 
  * File:   CreditLimitCalculator.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Due Date:
+ * System Used: MAC OSX
+ * Algorithm: Ask for account number, total charges, total credit, and credit limit.
+ * Account number will be checked to see if "-1" was provided, if it was, program
+ * will cancel, else program will continue to run. Calculations will be run and 
+ * if credit is over the limit, an output will tell the user that their credit
+ * is over the limit.
  *
  * Created on June 17, 2014, 1:01 PM
  */

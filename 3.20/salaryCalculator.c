@@ -1,6 +1,12 @@
 /* 
  * File:   salaryCalculator.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Due Date:
+ * System Used: Mac OSX
+ * Algorithm: Ask for hours work and hourly pay. Program will check for "-1"
+ * which will end the program. If it's not -1, the program will run and check if
+ * hours worked is over 40. If it's over 40, the correct calculations will be ran
+ * and if it's under 40, the correct calculations will be ran for that scenario
  *
  * Created on June 18, 2014, 9:53 AM
  */
