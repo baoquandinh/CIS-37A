@@ -1,6 +1,12 @@
 /* 
  * File:   main.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Due date: 
+ * System Used: Max OSX
+ * Algorithm: Check if letter grade is not EOF. If not, loop will continue until
+ * the EOF is given. At each correct letter grade, the correct counter will increase
+ * and total results will be given when the program ends. If the letter is invalid,
+ * the program will prompt for another correct input. 
  *
  * Created on June 18, 2014, 11:57 AM
 */
