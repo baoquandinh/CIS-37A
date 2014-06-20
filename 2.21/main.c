@@ -1,6 +1,9 @@
 /* 
  * File:   main.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Date Due:
+ * System Used: Max OSX
+ * Algorithm: Print out the shapes according to the picture
  *
  * Created on June 17, 2014, 10:05 AM
  */
