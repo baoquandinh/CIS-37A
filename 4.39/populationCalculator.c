@@ -22,6 +22,9 @@ int main(int argc, char** argv) {
     int year = 2014;
     float initialWorldPopulation = 7241218250;
     float annualGrowthRate = 0.0114; //Growth is 1.14%
+    int event, doubleYear; //Check for when the population is doubled
+    float doublePopulation;
+    
     
     //Default table layout
     puts("Year\tOriginal Population\tEnd of year population\t\tIncreased by");
@@ -49,21 +52,28 @@ int main(int argc, char** argv) {
         //SECOND COLUMN list the original
         printf("%.0f\t\t",originalPopulation);
         
-        
+        //Third column will print the new population at the end of the year
         printf("%.0f\t\t\t",endOfYearPopulation = originalPopulation + (annualGrowthRate * originalPopulation));
     
         //Fourth column printed is how much the population increase from beginning to end of year
         printf("%.0f",endOfYearPopulation - originalPopulation);
         
+        //Check when the population is doubled, will only happen once.
+        if(endOfYearPopulation / 2 >= initialWorldPopulation && event == 0)
+        {
+            doubleYear = year;
+            doublePopulation = endOfYearPopulation;
+            event++;
+        }
         
         
         //New line starts and increment the year
         puts("");
-        year++;
-        
+        year++;  
     }
-    
-
+     //Print out when the population double
+        printf("Population doubled in year %d , from %.0f in %d to %.0f."
+                , doubleYear,initialWorldPopulation, 2014, doublePopulation);
 
     return (EXIT_SUCCESS);
 }
