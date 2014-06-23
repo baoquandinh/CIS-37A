@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     
     
     //Prompt
-    printf("How many miles do you drive to work per day? Enter (xx.xx or xx)\n");
+    printf("How many miles do you drive to work per day? Enter (xx.xx)\n");
     scanf("%f", &milesPerDay);
     printf("What is the cost to drive per gallon? Enter ($xx.xx)\n");
     scanf("%f", &costPerGallon);
