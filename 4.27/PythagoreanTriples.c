@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
                 }
                 else
                 {
-                    
+                    //If not equal, do nothing
                 }
             }
         }
