@@ -4,7 +4,8 @@
  * Due Date: June 24, 2014
  * System Used: Max OSX
  * Algorithm: Prompt user for information and record the information in 
- *            variables. Total cost per day will be calculated.
+ *            variables. Total cost per day will be calculated and information
+ *            will be displayed.
  * 
  *
  * Created on June 23, 2014, 10:01 AM
@@ -42,7 +43,8 @@ int main(int argc, char** argv) {
     printf("Parking fees: $%.2f\n",parkingFee);
     printf("Tolls: $%.2f\n",tolls);
     
-    //Calculate the cost of driving per day
+    //Calculate the cost of driving per day. Miles driven divided by miles Per gallon,
+    //then multiply by miles per gallon and add the rest to get average daily cost.
     printf("Average cost per day per driver (Assuming same information provided)$%.2f\n" 
             ,totalCost =  ((milesPerDay / milesPerGallon) * costPerGallon)+ parkingFee + tolls);
     printf("If you Car-pool, each person would save $%.2f", totalCost);
