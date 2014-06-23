@@ -24,10 +24,10 @@ int main(int argc, char** argv) {
     printf("Enter side length: (From 1 - 20) ");
     scanf("%d", &sideLength);
     
-    //For loop for the rows, only prints 2 because it prints first and last
+    //For loop for the rows
     for (int i = 1; i <= sideLength; i++ )
     {
-    //For loop for the columns
+    //For loop for the first and last row
         if (i == 1 || i == sideLength)
         {
             for (int z = 1; z <= sideLength; z++)
@@ -36,7 +36,8 @@ int main(int argc, char** argv) {
             }
             puts("");
         }
-        else
+        else //If it's not the first or last row, then only print first and last star
+            //of each row in between first and last
         {
             for (int j = 1; j <= sideLength; j++)
             { 
