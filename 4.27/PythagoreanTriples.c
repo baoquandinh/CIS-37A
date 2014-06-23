@@ -27,6 +27,7 @@ int main(int argc, char** argv) {
                 //a^2 + b ^2 = c^2
                 if(pow(side1,2) + pow(side2,2) == pow(hypotenuse,2))
                 {
+                    //If theory is right, then print out.
                     printf("%.0f + %.0f = %.0f\n", pow(side1,2), pow(side2,2), pow(hypotenuse,2));
                 }
                 else
