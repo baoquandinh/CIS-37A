@@ -47,7 +47,7 @@ unsigned long long int power (unsigned int base, unsigned int exponent)
     }
     else
     {
-        return base * power(base, exponent - 1);
+        return base * power(base, exponent - 1); //power(base,exponent) is going to return the base each time
         
     }
 }
