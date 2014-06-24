@@ -23,16 +23,20 @@ int main(int argc, char** argv) {
     float fahrenheit(int celsiusTemperature); 
     
     //Loop for Celsius
+    puts("Fahrenheit to Celsius");
+    puts("---------------------");
     for (int i = 0; i <= 100; i++)
     {
-        printf("%.2f",celsius(i));
+        printf("Fahrenheit degree: %d, Celsius degree: %.2f\n",i,celsius(i));
         
     }
-    
+    puts("");
+    puts("Celsius to Fahrenheit");
+    puts("---------------------");
     //Loop for Fahrenheit
     for (int j = 32; j <= 212; j++)
     {
-        printf("%.2f",fahrenheit(j));
+        printf("Celsius degree: %d, Fahrenheit degree: %.2f\n",j,fahrenheit(j));
     }
     
 
