@@ -25,15 +25,27 @@ int main(int argc, char** argv) {
     //Loop for Celsius
     for (int i = 0; i <= 100; i++)
     {
-        (i - 32) * 5/9;
+        printf("%.2f",celsius(i));
+        
     }
     
     //Loop for Fahrenheit
     for (int j = 32; j <= 212; j++)
     {
-        
+        printf("%.2f",fahrenheit(j));
     }
+    
 
     return (EXIT_SUCCESS);
+}
+
+float celsius(int fahrenheitTemperature)
+{
+    return (fahrenheitTemperature - 32) * 5/9;
+}
+
+float fahrenheit(int celsiusTemperature)
+{
+    return (celsiusTemperature * 9/5) + 32;
 }
 
