@@ -1,6 +1,10 @@
 /* 
  * File:   diamondShape.c
- * Author: baoquandinh
+ * Name: Baoquan Dinh
+ * Due Date: June 23, 2014
+ * System Used: Mac OSX
+ * Algorithm: First loop will check for rows, second loop will check for how many
+ * empty spaces there are in a row and how many stars in that loop.
  *
  * Created on June 19, 2014, 11:07 AM
  */
