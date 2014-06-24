@@ -10,7 +10,7 @@
 
 /*
  * 
- */
+ */ 
 int main(int argc, char** argv) {
     
     int n[10]; // Array name is 'n' and contains 10 integers

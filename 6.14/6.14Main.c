@@ -14,7 +14,7 @@
 
 //Function prototype
 void mean(const unsigned int answer[]); //const means the value will not be changed
-void mean(unsigned int answer[]);
+void median(unsigned int answer[]);
 void mode(unsigned int freq[], unsigned const int answer[]);
 void bubbleSort(int a[]);
 void printArray(unsigned const int a[]);
@@ -46,7 +46,34 @@ int main(int argc, char** argv) {
     7,4,4,2,5,3,8,7,5,6,
     4,5,6,1,6,5,7,8,7};
     
-    
+    //process the response
+    mean(response);
+    //median(response);
+   // mode(frequency, response);
+ 
     return (EXIT_SUCCESS);
 }
 
+void mean(const unsigned int answer[])
+{
+    size_t counter;
+    unsigned int total = 0; //Variable to hold the sum of the array elements
+    puts("**********");
+    puts("   Mean   ");
+    puts("**********");
+    
+}
+void median(unsigned int answer[])
+{
+    puts("**********");
+    puts("  Median   ");
+    puts("**********");
+}
+void mode(unsigned int freq[], unsigned const int answer[])
+{
+    puts("**********");
+    puts("   Mode   ");
+    puts("**********");
+}
+void bubbleSort(int a[]);
+void printArray(unsigned const int a[]);
