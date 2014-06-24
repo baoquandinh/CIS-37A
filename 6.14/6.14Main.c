@@ -56,11 +56,21 @@ int main(int argc, char** argv) {
 
 void mean(const unsigned int answer[])
 {
-    size_t counter;
+    size_t j;
     unsigned int total = 0; //Variable to hold the sum of the array elements
+    
+    //Printing out heading
     puts("**********");
     puts("   Mean   ");
     puts("**********");
+    
+    for (j = 0; j < SIZE; j++)
+    {
+        total = total + answer[j]; 
+    }
+    
+    printf("The mean value of the data is the total: %u , divided by amount: %u "
+            "which will be %.4f",total,SIZE, (double) total/SIZE);
     
 }
 void median(unsigned int answer[])
