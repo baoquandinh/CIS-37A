@@ -21,10 +21,12 @@ int base;
 
 int main(int argc, char** argv) {
 
-    //prompt
-    printf("Enter a base and exponent");
-    scanf("Base: %d", &base);
-    scanf("Exponent: %d", &exponent);
+    //prompt for user input
+    printf("Enter a base and exponent.\n");
+    printf("Base: ");
+    scanf("%d", &base);
+    printf("Exponent: ");
+    scanf("%d", &exponent);
     
     
     return (EXIT_SUCCESS);
