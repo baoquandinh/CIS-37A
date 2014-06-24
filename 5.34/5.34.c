@@ -17,13 +17,15 @@
  */
 int main(int argc, char** argv) {
 
-    float celsius(int fahrenheitTemperature); //Returns a Celsius equivalent
-    float fahrenheit(int celsiusTemperature); //Returns a Fahrenheit equivalent
+    // Input is a Fahrenheit and result will be Celsius equivalent
+    float celsius(int fahrenheitTemperature); 
+    // Input is a Celsius and result will be Fahrenheit equivalent
+    float fahrenheit(int celsiusTemperature); 
     
     //Loop for Celsius
     for (int i = 0; i <= 100; i++)
     {
-        
+        (i - 32) * 5/9;
     }
     
     //Loop for Fahrenheit
