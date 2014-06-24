@@ -48,7 +48,8 @@ int main(int argc, char** argv) {
     
     //process the response
     mean(response);
-    //median(response);
+    puts("")//Line break
+    median(response);
    // mode(frequency, response);
  
     return (EXIT_SUCCESS);
@@ -72,12 +73,16 @@ void mean(const unsigned int answer[])
     printf("The mean value of the data is the total: %u , divided by amount: %u "
             "which will be %.4f",total,SIZE, (double) total/SIZE);
     
+    
 }
 void median(unsigned int answer[])
 {
     puts("**********");
     puts("  Median   ");
     puts("**********");
+    
+    puts("Here is the unsorted array");
+   // printArray(response[SIZE]);
 }
 void mode(unsigned int freq[], unsigned const int answer[])
 {
