@@ -14,9 +14,16 @@
 /*
  * 
  */
+
+unsigned long long int power (unsigned int base, unsigned int exponent);
+int exponenet;
+int base;
+
 int main(int argc, char** argv) {
 
-   
+    printf("Enter a base and exponent");
+    scanf("Base: %d", &base);
+    scanf("Exponent: %d", &exponent);
     
     
     return (EXIT_SUCCESS);
