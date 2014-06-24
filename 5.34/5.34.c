@@ -28,7 +28,27 @@ int main(int argc, char** argv) {
     printf("Exponent: ");
     scanf("%d", &exponent);
     
+    power(base,exponent);
+    
+    printf("Base is %d, exponent is %d and result is %llu",base, exponent, power(base,exponent));
     
     return (EXIT_SUCCESS);
+}
+
+unsigned long long int power (unsigned int base, unsigned int exponent)
+{
+    if (exponent == 0)
+    {
+        return 1;
+    }
+    if (exponent == 1)
+    {
+        return base;
+    }
+    else
+    {
+        return base * power(base, exponent - 1);
+        
+    }
 }
 
