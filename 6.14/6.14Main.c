@@ -1,8 +1,8 @@
 /* 
  * File:   6.14Main.c
  * Name: Baoquan Dinh
- * Due Date:
- * System Used:
+ * Due Date: July 1, 2014
+ * System Used: Mac OSX
  * Algorithm:
  *
  * Created on June 24, 2014, 12:59 PM
@@ -35,7 +35,8 @@ int main(int argc, char** argv) {
      * value specified
      */
     
-    unsigned int response[SIZE] = {6,7,8,9,8,7,8,9,8,9,
+    unsigned int response[SIZE] = 
+   {6,7,8,9,8,7,8,9,8,9,
     7,8,9,5,9,8,7,8,7,8,
     6,7,8,9,3,9,8,7,8,7,
     7,8,9,8,9,8,9,7,8,9,
@@ -44,7 +45,7 @@ int main(int argc, char** argv) {
     5,6,7,2,5,3,9,4,6,4,
     7,8,9,6,8,7,8,9,7,8,
     7,4,4,2,5,3,8,7,5,6,
-    4,5,6,1,6,5,7,8,7};
+    4,5,6,1,6,5,7,8,7}; 
     
     //process the response
     mean(response);
@@ -88,7 +89,7 @@ void median(unsigned int answer[])
     puts("");
     puts("");
     bubbleSort(answer);
-    puts("Here is the printed array");
+    puts("Here is the sorted array");
     printArray(answer);
 } 
 
@@ -129,19 +130,16 @@ void bubbleSort(unsigned int a[])
         }
     }
 }
-void printArray(unsigned const int a[])
+void printArray(const unsigned int a[])
 {
     size_t j; //Declared counter
 
-    for (int j = 0; j < SIZE ; j++)
+    for (j = 0; j < SIZE ; j++)
     {
         if( j % 20 == 0)
         {
             puts(""); // Line break every 20 elements
         }
-        else
-        {
             printf("%2u", a[j]);
-        }
     }
 }
