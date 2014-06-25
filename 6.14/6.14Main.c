@@ -52,8 +52,7 @@ int main(int argc, char** argv) {
     puts("");//Line break
     median(response);
     puts("");//Line break
-
-   // mode(frequency, response);
+    mode(frequency, response);
  
     return (EXIT_SUCCESS);
 }
@@ -98,6 +97,8 @@ void mode(unsigned int freq[], unsigned const int answer[])
     puts("**********");
     puts("   Mode   ");
     puts("**********");
+    
+    
 }
 
 void bubbleSort(unsigned int a[])
