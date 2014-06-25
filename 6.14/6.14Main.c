@@ -16,7 +16,7 @@
 void mean(const unsigned int answer[]); //const means the value will not be changed
 void median(unsigned int answer[]);
 void mode(unsigned int freq[], unsigned const int answer[]);
-void bubbleSort(int a[]);
+void bubbleSort(unsigned int a[]);
 void printArray(unsigned const int a[]);
 
 /*
@@ -48,8 +48,10 @@ int main(int argc, char** argv) {
     
     //process the response
     mean(response);
-    puts("")//Line break
+    puts("");//Line break
     median(response);
+    puts("");//Line break
+
    // mode(frequency, response);
  
     return (EXIT_SUCCESS);
@@ -82,13 +84,64 @@ void median(unsigned int answer[])
     puts("**********");
     
     puts("Here is the unsorted array");
-   // printArray(response[SIZE]);
-}
+    printArray(answer);
+    puts("");
+    puts("");
+    bubbleSort(answer);
+    puts("Here is the printed array");
+    printArray(answer);
+} 
+
 void mode(unsigned int freq[], unsigned const int answer[])
 {
     puts("**********");
     puts("   Mode   ");
     puts("**********");
 }
-void bubbleSort(int a[]);
-void printArray(unsigned const int a[]);
+
+void bubbleSort(unsigned int a[])
+{
+    size_t i; //Declared counter for array
+    unsigned int pass;
+    unsigned int hold; //Holds an element value
+            
+    //This loop goes through the array
+    for (pass = 1; pass < SIZE; ++pass )
+    {
+        //This loop performs the switch
+        for(i = 0; i < SIZE - 1 ; ++i)
+        {
+            //Checks if the next element is bigger than previous
+            if (a[i] > a[i + 1] )
+            {
+            /*
+             * If value of a[i] > a[i + 1], the value of a[i] is placed in a 
+             * temporary variable. Now the value of a[i] is replaced by the 
+             * value of a[i + 1]. The value of a[i] now replace the value of
+             * a[i +1] from the temp variable.
+             */
+             hold = a[i];
+             a[i] = a[i +1];
+             a[i + 1] = hold;
+            
+            }
+           
+        }
+    }
+}
+void printArray(unsigned const int a[])
+{
+    size_t j; //Declared counter
+
+    for (int j = 0; j < SIZE ; j++)
+    {
+        if( j % 20 == 0)
+        {
+            puts(""); // Line break every 20 elements
+        }
+        else
+        {
+            printf("%2u", a[j]);
+        }
+    }
+}
