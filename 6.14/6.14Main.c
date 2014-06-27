@@ -106,6 +106,8 @@ void mode(unsigned int freq[], unsigned const int answer[])
     unsigned int h; //Counter for displaying histogram freq array values
     unsigned int largest = 0; //Represent largest frequency
     unsigned int modeValue = 0; //Represent most frequent response
+    unsigned int secondLargest = 0;
+    unsigned int secondModeValue =0;
     
     for (rating = 1; rating <= 9; rating++)
     {
@@ -117,20 +119,28 @@ void mode(unsigned int freq[], unsigned const int answer[])
         ++freq[answer[j]];
     }
     
-    printf( "%s%11s%19s\n\n%54s\n%54s\n\n","Response", "Frequency", "Histogram","1 1 2 2","5 0 5 0 5");
+    printf( "%s%11s%19s\n\n%54s\n%54s\n\n","Response", "Frequency", 
+            "Histogram","1 1 2 2","5 0 5 0 5");
     
  
     for (rating = 1; rating <= 9; rating++)
     {
         printf("%8u%11u         ", rating, freq[rating]);
         
+        //Keep track of mode value and largest frequency value
         if (freq[rating] > largest)
         {
             largest = freq[rating];
             modeValue = rating;
         }
         
+        if (freq[rating] == largest)
+        {
+            secondLargest = freq[rating];
+            secondModeValue = rating;
+        }
         
+        //Output histogram bar representing frequency value
         for (h = 1; h <= freq[rating]; h++)
         {
             printf("%s", "*");
@@ -140,7 +150,7 @@ void mode(unsigned int freq[], unsigned const int answer[])
     }
     
     printf( "\nThe mode is the most frequent value.\n"
-            "For this run the mode is %u which occurred"" %u times.\n", modeValue, largest );
+            "For this run the mode is %u and %u which occurred"" %u times.\n", modeValue, secondModeValue, largest );
 }
 
 void bubbleSort(unsigned int a[])
