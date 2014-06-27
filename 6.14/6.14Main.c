@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 100
+#define SIZE 10
 
 //Function prototype
 void mean(const unsigned int answer[]); //const means the value will not be changed
@@ -36,16 +36,7 @@ int main(int argc, char** argv) {
      */
     
     unsigned int response[SIZE] = 
-   {6,7,8,9,8,7,8,9,8,9,
-    7,8,9,5,9,8,7,8,7,8,
-    6,7,8,9,3,9,8,7,8,7,
-    7,8,9,8,9,8,9,7,8,9,
-    6,7,8,7,8,7,9,8,9,2,
-    7,8,9,8,9,8,9,7,5,3,
-    5,6,7,2,5,3,9,4,6,4,
-    7,8,9,6,8,7,8,9,7,8,
-    7,4,4,2,5,3,8,7,5,6,
-    4,5,6,1,6,5,7,8,7,7}; 
+   {1,3,3,4,5,2,7,8,9,1}; 
     
     //process the response
     mean(response);
@@ -91,8 +82,17 @@ void median(unsigned int answer[])
     puts("Here is the sorted array");
     printArray(answer);
     
+    //When the length is even
+    printf("\n\nThe median is element %u and %u which is %u and %u\n"
+            "For this run the median is %.2f\n\n",SIZE /2 - 1 , SIZE / 2 ,
+            answer[SIZE /2 -1],answer[SIZE / 2], 
+            (double) (answer[SIZE /2 -1] + answer[SIZE / 2] )/ 2 );
+   
+    /*
+     * This statement are for odd problems.
     printf("\n\nThe median is element %u of\n" "the sorted %u element array.\n"
 "For this run the median is %u\n\n", SIZE / 2, SIZE, answer[ SIZE / 2 ] );
+     */
 } 
 
 void mode(unsigned int freq[], unsigned const int answer[])
@@ -183,6 +183,6 @@ void printArray(const unsigned int a[])
         {
             puts(""); // Line break every 20 elements
         }
-            printf("%2u", a[j]);
+            printf("%u ", a[j]);
     }
 }
