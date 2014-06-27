@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SIZE 99
+#define SIZE 100
 
 //Function prototype
 void mean(const unsigned int answer[]); //const means the value will not be changed
@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
     5,6,7,2,5,3,9,4,6,4,
     7,8,9,6,8,7,8,9,7,8,
     7,4,4,2,5,3,8,7,5,6,
-    4,5,6,1,6,5,7,8,7}; 
+    4,5,6,1,6,5,7,8,7,7}; 
     
     //process the response
     mean(response);
@@ -72,7 +72,7 @@ void mean(const unsigned int answer[])
         total = total + answer[j]; 
     }
     
-    printf("The mean value of the data is the total: %u , divided by amount: %u "
+    printf("The mean value of the data is the total: %u, divided by amount: %u "
             "which will be %.4f",total,SIZE, (double) total/SIZE);
     
     
@@ -90,6 +90,9 @@ void median(unsigned int answer[])
     bubbleSort(answer);
     puts("Here is the sorted array");
     printArray(answer);
+    
+    printf("\n\nThe median is element %u of\n" "the sorted %u element array.\n"
+"For this run the median is %u\n\n", SIZE / 2, SIZE, answer[ SIZE / 2 ] );
 } 
 
 void mode(unsigned int freq[], unsigned const int answer[])
@@ -98,7 +101,46 @@ void mode(unsigned int freq[], unsigned const int answer[])
     puts("   Mode   ");
     puts("**********");
     
+    size_t rating; //counter for accessing elements 1-9 of array freq
+    size_t j; //Counter for summarizing elements 0-98 of array answer
+    unsigned int h; //Counter for displaying histogram freq array values
+    unsigned int largest = 0; //Represent largest frequency
+    unsigned int modeValue = 0; //Represent most frequent response
     
+    for (rating = 1; rating <= 9; rating++)
+    {
+        freq[rating] = 0;
+    }
+    
+    for (j = 0; j < SIZE; j++)
+    {
+        ++freq[answer[j]];
+    }
+    
+    printf( "%s%11s%19s\n\n%54s\n%54s\n\n","Response", "Frequency", "Histogram","1 1 2 2","5 0 5 0 5");
+    
+ 
+    for (rating = 1; rating <= 9; rating++)
+    {
+        printf("%8u%11u         ", rating, freq[rating]);
+        
+        if (freq[rating] > largest)
+        {
+            largest = freq[rating];
+            modeValue = rating;
+        }
+        
+        
+        for (h = 1; h <= freq[rating]; h++)
+        {
+            printf("%s", "*");
+        }
+        
+        puts("");
+    }
+    
+    printf( "\nThe mode is the most frequent value.\n"
+            "For this run the mode is %u which occurred"" %u times.\n", modeValue, largest );
 }
 
 void bubbleSort(unsigned int a[])
