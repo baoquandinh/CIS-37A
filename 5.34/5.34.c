@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     
     power(base,exponent);
     
-    printf("Base is %d, exponent is %d and result is %llu",base, exponent, power(base,exponent));
+    printf("Base is %d, exponent is %d and result is %llu\n",base, exponent, power(base,exponent));
     
     return (EXIT_SUCCESS);
 }

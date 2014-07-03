@@ -70,7 +70,7 @@ size_t binarySearch(const int b[], int searchKey, size_t low, size_t high)
         {
             return middle;
         }
-        else if (searchKey < b[middle])
+        else if (searchKey <= b[middle])
         {
             return binarySearch(b, searchKey,0, middle -1);
            // high = middle -1 ; //Search low end of array
@@ -78,7 +78,7 @@ size_t binarySearch(const int b[], int searchKey, size_t low, size_t high)
 
         else
         {
-            return binarySearch(b, searchKey, middle + 1, SIZE -1);
+            return binarySearch(b, searchKey, middle + 1, SIZE - 1); 
            // low = middle + 1; //Search high end of array
         }
     }
