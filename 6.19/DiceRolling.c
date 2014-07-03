@@ -1,7 +1,9 @@
 /* 
  * File:   DiceRolling.c
- * Author: baoquandinh
- *
+ * Name: Baoquan Dinh
+ * Due Date: June 2, 2014
+ * System Used: Mac OSX
+ * Algorithm: 
  * Created on June 27, 2014, 3:30 PM
  */
 
