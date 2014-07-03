@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     
     
     /*
-     * This print statement is to check how the array is setup
+     * This print statement is to check how the array is setup and used to compare to answer later
      */
     printf("%4s%16s\n", "Element", "Value" );
     for (i = 0; i < SIZE; i++)
