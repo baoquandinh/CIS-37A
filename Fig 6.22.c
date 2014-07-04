@@ -25,13 +25,13 @@ int main (void)
 	  //Detemine smallest and largest grade values
 
 	  printf("\n\nLowest grade: %d\nHighest grade: %d\n", 
-	  	minimum(studentGrades,STUDENTS,EXAMS)
+	  	minimum(studentGrades,STUDENTS,EXAMS),
 	  	maximum(studentGrades,STUDENTS,EXAMS));
 
 	  //Calculate average for each student
 	  for (student = 0; student < STUDENTS; student++)
 	  {
-	  	printf("The average grade for student %u is %.2f\n",student,average(studentGrades[student],EXAMS) );
+	  	printf("The average grade for student %lu is %.2f\n",student,average(studentGrades[student],EXAMS) );
 	  }
 }
 
@@ -51,6 +51,28 @@ void printArray(int grades[][EXAMS], size_t teens, size_t tests)
 }
 
 int minimum(int grades[][EXAMS], size_t teens, size_t tests)
-//int maximum(int grades[][EXAMS], size_t teens, size_t tests)
+{
+	size_t i;
+	size_t j;
+
+	int lowestGrade = 0;
+
+	for(i = 0; i < teens; i++)
+	{
+		for (j = 0; j < tests; j++)
+		{
+			if(grades[i][j] > lowestGrade)
+			{
+				lowestGrade  = grades[i][j];
+			}
+		}
+	}
+	return lowestGrade;
+}
+
+int maximum(int grades[][EXAMS], size_t teens, size_t tests)
+{
+	
+}
 
 
