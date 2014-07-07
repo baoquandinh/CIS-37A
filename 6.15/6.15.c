@@ -9,10 +9,13 @@ Algorithm:
 #include <stdio.h>
 #define SIZE 20
 
+//Function prototype
+void sortArray( unsigned int a[SIZE]);
+
 int main (void)
 {
 	size_t i;
-	unsigned int a[SIZE] = {};
+	unsigned int array1[SIZE] = {};
 
 	printf("Please enter in 20 numbers from 10-100:\n");
 
@@ -20,10 +23,10 @@ int main (void)
 		for (i = 1; i <= SIZE; i++)
 		{
 			printf("%lu)", i);
-			scanf("%d", &a[i]);
+			scanf("%d", &array1[i]);
 
 			//Check if the value enter is inside the range
-			if(a[i] > 100 || a[i] < 10)
+			if(array1[i] > 100 || array1[i] < 10)
 			{
 				i = 21;
 				puts(""); //Line break
@@ -33,11 +36,18 @@ int main (void)
 		}
 		
 		//Print out the array, if number entered is larger than field, array will print out 0 for remaining
-		puts("Here is your printed array");
+		puts("Here is your original printed array");
 		for (i = 1; i <= SIZE; i++)
 		{
-			printf("%d\n", a[i]);
+			printf("%d\n", array1[i]);
 		}
 	
+		puts("Here is the arry with no duplicates");
+		sortArray(array1[SIZE]);
 	
+}
+
+void sortArray(unsigned int a[])
+{
+
 }
