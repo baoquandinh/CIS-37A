@@ -22,6 +22,8 @@ int main (void)
 	scanf("%d", &y);
 
 	gcd(x,y);
+
+	printf("The common divisor between %d and %d is %d.\n", x, y, gcd(x,y));
 }
 
 //Function definition for gcd
