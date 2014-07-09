@@ -7,7 +7,6 @@ void countWord(const char sentence[]);
 
 int sentenceCounter;
 
-
 int main (void)
 {
 	puts("Here are some inputed sentences:");
@@ -39,8 +38,8 @@ void countWord(const char sentence[])
 			wordCounter++;
 		}
 	}
-	//Counts how many characters are in sentence
-	//printf("%lu\n", strlen(sentence));
+
+	printf("%lu\n", strlen(sentence));
 	printf("Sentence %d:\n%s\n", sentenceCounter, sentence);
 	printf("There are %d words in this sentence.\n", wordCounter );
 	puts("");
