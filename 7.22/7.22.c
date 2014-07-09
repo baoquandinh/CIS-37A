@@ -77,7 +77,104 @@ while (maze[row][column] != maze[4][11])
 		{
 			
 				row--;
-				maze[row][column] = '^';
+
+				if(maze[row][column] == '#')
+				{
+					row++;
+					tempR = row;
+					tempC = column;
+					puts("Sorry, not a valid path.");
+				}
+				else
+				{
+					maze[row][column] = '^';
+					//printf("%d%d\n", row, column);
+					tempR = row;
+					tempC = column;
+					for (row = 0; row < SIZE; row++)
+					{		
+						for (column = 0; column < SIZE; column++)
+						{
+							printf("%3c", maze[row][column]);
+							
+						}
+						puts("");
+
+					}
+				}
+
+		}
+		if (key == 97) //a
+		{
+
+			column--;
+			if(maze[row][column] == '#')
+				{
+					column++;
+					tempR = row;
+					tempC = column;
+					puts("Sorry, not a valid path.");
+				}
+			else
+			{
+				maze[row][column] = '<';
+				printf("%d%d\n", row, column);
+				tempR = row;
+				tempC = column;
+				for (row = 0; row < SIZE; row++)
+				{		
+					for (column = 0; column < SIZE; column++)
+					{
+						printf("%3c", maze[row][column]);
+						
+					}
+					puts("");
+
+				}
+			}
+		}
+		if (key == 115) //s
+		{
+			row++;
+			if(maze[row][column] == '#')
+				{
+					row--;
+					tempR = row;
+					tempC = column;
+					puts("Sorry, not a valid path.");
+				}
+
+			else
+			{
+				maze[row][column] = 'v';
+				//printf("%d%d\n", row, column);
+				tempR = row;
+				tempC = column;
+				for (row = 0; row < SIZE; row++)
+				{		
+					for (column = 0; column < SIZE; column++)
+					{
+						printf("%3c", maze[row][column]);
+						
+					}
+					puts("");
+
+			}
+			}
+		}
+		if (key == 100) //d
+		{
+			column++;
+			if(maze[row][column] == '#')
+				{
+					column--;
+					tempR = row;
+					tempC = column;
+					puts("Sorry, not a valid path.");
+				}
+			else
+			{	
+				maze[row][column] = '>';
 				//printf("%d%d\n", row, column);
 				tempR = row;
 				tempC = column;
@@ -91,61 +188,6 @@ while (maze[row][column] != maze[4][11])
 					puts("");
 
 				}
-			
-
-		}
-		if (key == 97) //a
-		{
-			column--;
-			maze[row][column] = '<';
-			printf("%d%d\n", row, column);
-			tempR = row;
-			tempC = column;
-			for (row = 0; row < SIZE; row++)
-			{		
-				for (column = 0; column < SIZE; column++)
-				{
-					printf("%3c", maze[row][column]);
-					
-				}
-				puts("");
-
-			}
-		}
-		if (key == 115) //s
-		{
-			row++;
-			maze[row][column] = 'v';
-			//printf("%d%d\n", row, column);
-			tempR = row;
-			tempC = column;
-			for (row = 0; row < SIZE; row++)
-			{		
-				for (column = 0; column < SIZE; column++)
-				{
-					printf("%3c", maze[row][column]);
-					
-				}
-				puts("");
-
-			}
-		}
-		if (key == 100) //d
-		{
-			column++;
-			maze[row][column] = '>';
-			//printf("%d%d\n", row, column);
-			tempR = row;
-			tempC = column;
-			for (row = 0; row < SIZE; row++)
-			{		
-				for (column = 0; column < SIZE; column++)
-				{
-					printf("%3c", maze[row][column]);
-					
-				}
-				puts("");
-
 			}
 
 		}
