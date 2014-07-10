@@ -6,27 +6,33 @@ System Used: Max OSX
 
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
+
 #define SIZE 100
 
 int main (void)
 {
-	size_t i;
-	char sentence[SIZE] = {};
+	char text[SIZE] = {};
+	char search[SIZE] = {};
 
-	//Accepts input of user
-	puts("Enter some text below:");
-	fgets(sentence, SIZE, stdin);
+	char *string;
+	char *stringSearch;
 
+	char *searchPtr;
 
-	//Prints out user input to check
-	for (i = 0; i <= strlen(sentence); i++)
-	{
-		if(isalpha(sentence[i]) || isblank(sentence[i]) || ispunct(sentence[i]))
-		{
-		printf("%c", sentence[i] );
-		}
-	}
+	//Retrieve user input
+	puts("Enter some text below");
+	fgets(text, SIZE,stdin);
 
+	//Retrieve the search string from user
 	puts("");
+	puts("Enter the search string");
+	fgets(search, SIZE, stdin);
+	puts("");
+
+	searchPtr = search; //Set address
+	printf("%s\n",strstr(text, searchPtr));
 }
+
+
+
+
