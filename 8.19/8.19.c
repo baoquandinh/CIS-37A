@@ -1,3 +1,9 @@
+/*
+Name: Baoquan Dinh
+Due Date: July 10, 2014
+System Used: Max OSX
+*/
+
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
