@@ -23,9 +23,3 @@ int main (void)
 	puts("");
 	printf("Rounded to nearest ten-thousandth: %.4f\n",number);
 }
-
-
-/*
-Write a program that prints the value 100.453627
-rounded to the nearest digit, tenth, hundredth, thousandth and ten-thousandth.
-*/
