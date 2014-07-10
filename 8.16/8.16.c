@@ -14,23 +14,30 @@ int main (void)
 	char text[SIZE] = {};
 	char search[SIZE] = {};
 
-	char *string;
-	char *stringSearch;
-
 	char *searchPtr;
 
 	//Retrieve user input
 	puts("Enter some text below");
-	fgets(text, SIZE,stdin);
+	gets(text);
 
 	//Retrieve the search string from user
 	puts("");
 	puts("Enter the search string");
-	fgets(search, SIZE, stdin);
+	gets(search);
 	puts("");
 
+	//Retrieve the first occurence
 	searchPtr = search; //Set address
+	puts("First occurence:");
 	printf("%s\n",strstr(text, searchPtr));
+
+
+	//Retrieves the second occurence
+	if (strstr(strstr(text, searchPtr), searchPtr) )
+	{
+		puts("Second occurence:");
+		printf("%s\n", strstr(strstr(text, searchPtr + 1), searchPtr));
+	}
 }
 
 
