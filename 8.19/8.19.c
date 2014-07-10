@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#define SIZE 25
 
 //Function prototype
-void countWord(const char sentence[]);
+void countLetter(const char sentence[]);
 
 int sentenceCounter;
 
@@ -17,30 +18,33 @@ int main (void)
 
 	printf("Sentence 1 is: %s\nSentence 2 is: %s\nSentence 3 is; %s\n", s1,s2,s3);
 	puts("");
-	countWord(s1);
-	countWord(s2);
-	countWord(s3);
+	countLetter(s1);
+	countLetter(s2);
+	countLetter(s3);
 }	
 
-void countWord(const char sentence[])
+void countLetter(const char sentence[])
 {
 	++sentenceCounter;
-	int wordCounter = 0;
+	char alphabet[SIZE] = {};
+	size_t freq;
+
+	printf("Sentence %d:\n%s\n", sentenceCounter, sentence);
+	puts("");
 
 	for (int i = 0; i <= strlen(sentence); i++)
 	{
-		if ((isalpha(sentence[i - 1]) || ispunct(sentence[i-1])) && isblank(sentence[i]))
+		if (isalpha(sentence[i]))
 		{
-			wordCounter++;
-		}
-		if (sentence[i] == '\0')
-		{
-			wordCounter++;
+			printf("%3c", sentence[i]);
+			++alphabet[sentence[i]];
 		}
 	}
-
-	printf("%lu\n", strlen(sentence));
-	printf("Sentence %d:\n%s\n", sentenceCounter, sentence);
-	printf("There are %d words in this sentence.\n", wordCounter );
 	puts("");
+
+	for (int  j = 0; j < freq; j++)
+	{
+		printf("%5lu%10c\n", freq, alphabet[j]);
+	}
+	
 }
