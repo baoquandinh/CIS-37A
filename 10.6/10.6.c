@@ -6,6 +6,7 @@ Algorithm:
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 struct customer
 	{
@@ -55,5 +56,7 @@ int main (void)
 	printf("City: %5s\n", customerPtr->personal.city);
 	printf("State: %5s\n", customerPtr->personal.state);
 	printf("Zip Code: %5s\n", customerPtr->personal.zipcode);
+
+	return (EXIT_SUCCESS);
 
 }
