@@ -2,7 +2,7 @@
 Name: Baoquan Dinh
 Due Date: July 13, 2014
 System Used: Mac OSX
-Algorithm:
+Algorithm: 
 */
 
 #include <stdio.h>
