@@ -1,5 +1,4 @@
 /* 
- * File:   HallowSquares.c
  * Name: Baoquan Dinh
  * Due Date: June 24, 2014
  * System Used: Max OSX
