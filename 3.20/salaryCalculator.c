@@ -1,5 +1,4 @@
 /* 
- * File:   salaryCalculator.c
  * Name: Baoquan Dinh
  * Due Date:
  * System Used: Mac OSX
