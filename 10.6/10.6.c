@@ -12,7 +12,7 @@ struct customer
 		char lastname[15];
 		char firstname[15];
 		unsigned int customerNumber;
-	struct
+	struct //Since this structure has no tag, data must be declared in struct definition
 		{
 			char phoneNumber [11] = "4088960882" ;
 			char address[50] = "490 Cheyenne Lane";
@@ -21,13 +21,15 @@ struct customer
 			char zipcode[6] = "95123";
 		} personal;
 
-}customerRecord, *customerPtr;
+ }customerRecord, *customerPtr;
 	
 
 int main (void)
 {
-	customer customerRecord = {.lastname = "Dinh", .firstname = "Baoquan", .customerNumber = 7};
-
+	//Shortcut way of adding data into structure
+	customer customerRecord= {.lastname = "Dinh", .firstname = "Baoquan", .customerNumber = 7};
+	
+	customerPtr = &customerRecord;
 	//Customer records without using pointers
 	puts("Customer Record");
 	puts("---------------");
@@ -38,18 +40,22 @@ int main (void)
 	printf("Address: %5s\n", customerRecord.personal.address);
 	printf("City: %5s\n", customerRecord.personal.city);
 	printf("State: %5s\n", customerRecord.personal.state);
-	printf("Zipcode: %5s\n", customerRecord.personal.zipcode);
-
+	printf("Zip Code: %5s\n", customerRecord.personal.zipcode);
+	puts("---------------");
 	puts("");
 
-	//Customer records using pointers
-	/*
-	puts("Customer Record");
+	//Customer records using pointers. There should be no changes
+	puts("Customer Record (With pointers)");
 	puts("---------------");
 	printf("Last Name: %5s\n", customerPtr->lastname );
 	printf("First Name: %5s\n", customerPtr->firstname );
 	printf("Customer Number: %d\n", customerPtr->customerNumber );
-	*/
+	printf("Phone Number: %5s\n", customerPtr->personal.phoneNumber);
+	printf("Address: %5s\n", customerPtr->personal.address);
+	printf("City: %5s\n", customerPtr->personal.city);
+	printf("State: %5s\n", customerPtr->personal.state);
+	printf("Zip Code: %5s\n", customerPtr->personal.zipcode);
+
 }
 
 
