@@ -6,8 +6,6 @@
  * Algorithm: Prompt user for information and record the information in 
  *            variables. Total cost per day will be calculated and information
  *            will be displayed.
- * 
- *
  * Created on June 23, 2014, 10:01 AM
  */
 
