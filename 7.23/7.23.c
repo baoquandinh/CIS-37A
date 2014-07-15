@@ -1,13 +1,14 @@
-/*
+/* 
 Name: Baoquan Dinh
-Due Date: July 13, 2014
+Due Date:
 System Used: Mac OSX
 Algorithm:
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main (void)
 {
-	
+	return (EXIT_SUCCESS);
 }
