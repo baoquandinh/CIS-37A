@@ -5,7 +5,7 @@
  * System Used: Max OSX
  * Algorithm: Creates a while loop to create 8 lines. Check if the row is odd 
  * or even. If the row is even, then it will print out * without a space in front
- * if it's odd, then the row will have a space follow by a * printed out.
+ * if it's odd, then the row will have a space follow by a * printed out. 
  *
  * Created on June 18, 2014, 10:09 AM
  */
