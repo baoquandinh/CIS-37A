@@ -14,11 +14,11 @@ struct customer
 		unsigned int customerNumber;
 	struct //Since this structure has no tag, data must be declared in struct definition
 		{
-			char phoneNumber [11] = "4088960882" ;
-			char address[50] = "490 Cheyenne Lane";
+			char phoneNumber [11] = "3123134124" ;
+			char address[50] = "429 Little Street";
 			char city[15] = "San Jose";
-			char state[3] = "CA";
-			char zipcode[6] = "95123";
+			char state[3] = "NY";
+			char zipcode[6] = "95243";
 		} personal;
 
  }customerRecord, *customerPtr;
@@ -27,8 +27,8 @@ struct customer
 int main (void)
 {
 	//Shortcut way of adding data into structure
-	customer customerRecord= {.lastname = "Dinh", .firstname = "Baoquan", .customerNumber = 7};
-	
+	customer customerRecord= {.lastname = "Nguyen", .firstname = "Jacob", .customerNumber = 7};
+
 	customerPtr = &customerRecord;
 	//Customer records without using pointers
 	puts("Customer Record");
