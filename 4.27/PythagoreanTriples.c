@@ -1,5 +1,4 @@
 /* 
- * File:   PythagoreanTriples.c
  * Name: Baoquan Dinh
  * Due Date: June 24, 2014
  * System Used: MAC OSX
