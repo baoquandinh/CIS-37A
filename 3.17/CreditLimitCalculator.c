@@ -1,5 +1,4 @@
 /* 
- * File:   CreditLimitCalculator.c
  * Name: Baoquan Dinh
  * Due Date:
  * System Used: MAC OSX
