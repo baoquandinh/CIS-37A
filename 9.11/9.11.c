@@ -9,5 +9,19 @@ Algorithm:
 
 int main (void)
 {
-	
+	puts("\'");
+	puts("\"");
+	puts("\?");
+	puts("\\");
+	puts("a\aa");
+	puts("a\ba");
+	puts("a\na");
+	puts("a\ra");
+	puts("a\ta");
+
 }
+
+
+/*
+\', \", \?, \\, \a, \b, \n, \r and \t
+*/

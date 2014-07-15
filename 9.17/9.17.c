@@ -9,5 +9,5 @@ Algorithm:
 
 int main (void)
 {
-	
+	printf("%.9g\n", 9876.12345);
 }
