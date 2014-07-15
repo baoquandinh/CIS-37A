@@ -57,15 +57,3 @@ int main (void)
 	printf("Zip Code: %5s\n", customerPtr->personal.zipcode);
 
 }
-
-
-/*
-b) MemberlastNameofthestructurepointedtobycustomerPtr.
-d) MemberfirstNameofthestructurepointedtobycustomerPtr.
-f) Member customerNumber of the structure pointed to by customerPtr.
-h) MemberphoneNumberofmemberpersonalofthestructurepointedtobycustomerPtr.
-j) Member address of member personal of the structure pointed to by customerPtr.
-l) Member city of member personal of the structure pointed to by customerPtr.
-n) MemberstateofmemberpersonalofthestructurepointedtobycustomerPtr.
-p) MemberzipCodeofmemberpersonalofthestructurepointedtobycustomerPtr.
-*/
