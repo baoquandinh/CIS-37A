@@ -6,6 +6,7 @@ Algorithm:
 */
 
 #include <stdio.h>
+
 struct clientData 
 {
 	unsigned int accountNumber; // account number 

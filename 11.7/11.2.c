@@ -31,8 +31,10 @@ if ( ( filePtr = fopen( "credit.dat", "wb" ) ) == NULL )
 	puts( "File could not be opened." ); } // end if
 	else 
 	{
-		for(i=1;i<=100;++i){
-		fwrite( &blankClient, sizeof( struct clientData ), 1, filePtr ); }//endfor
+		for(i = 1 ; i <= 100; ++i)
+		{
+			fwrite( &blankClient, sizeof( struct clientData ), 1, filePtr );
+      	}
       	fclose ( filePtr ); // fclose closes the file
     } // end else
 }//endmain
