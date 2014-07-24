@@ -1,6 +1,6 @@
 /*
 Name: Baoquan Dinh
-Due Date: July 4, 014
+Due Date: July 24, 014
 System Used: Max OSX
 Algorithm:
 */
@@ -17,7 +17,6 @@ struct clientData
 int main( void ) 
 {
 	FILE *filePtr; // credit.dat file pointer
-	￼
 	struct clientData client = { 0, "", "", 0.0 };
 	// fopen opens the file; exits if file cannot be opened
 	if ( ( filePtr = fopen( "credit.dat", "rb+" ) ) == NULL ) 
