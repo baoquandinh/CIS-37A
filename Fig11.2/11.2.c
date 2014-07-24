@@ -1,33 +1,38 @@
- // Fig. 11.2: fig11_02.c
- // Creating a sequential file
- #include <stdio.h> 
- int main( void )
- {
- 	unsigned int account; // account number
- 	char name[ 30 ]; // account name
- 	double balance; // account balance
+/*
+Name: Baoquan Dinh
+Due Date: July 24, 2014
+System Used: Max OSX
+Algorithm:
+*/
 
- 	FILE *cfPtr; // cfPtr = clients.dat file pointer
- // fopen opens file. Exit program if unable to create file
- 	if ( ( cfPtr = fopen( "clients.dat", "w" ) ) == NULL ) 
- 	{
- 		puts( "File could not be opened" );
- 	}//endif
- 	else 
- 	{
-		 puts( "Enter the account, name, and balance." );
-		 puts( "Enter EOF to end input." );
-		 printf( "%s", "? " );
-		 scanf( "%d%29s%lf", &account, name, &balance );
+#include <stdio.h>
 
-		 // write account, name and balance into file with fprintf
-		 while ( !feof (stdin)) 
-		 {
-		 	fprintf( cfPtr, "%d %s %.2f\n", account, name, balance );
-			 printf( "%s", "? " );
-			 scanf( "%d%29s%lf", &account, name, &balance );
+// clientData structure definition
+struct clientData 
+{
+	unsigned int accountNumber; // account number
+	char lastName[ 30 ]; // account last name char 
+	char firstname[ 30 ]; // account first name 
+	double balance; // account balance
+}; // end structure clientData
 
-		 } // end while
-		 fclose( cfPtr ); // fclose closes file
-	} // end else
- }
+int main (void )
+{
+
+unsigned int i; 
+
+struct clientData blankClient = { 0, "", "", 0.0 }; 
+
+FILE *filePtr; // credit.dat file pointer
+
+// fopen opens the file; exits if file cannot be opened
+if ( ( filePtr = fopen( "credit.dat", "wb" ) ) == NULL ) 
+{
+	puts( "File could not be opened." ); } // end if
+	else 
+	{
+		for(i=1;i<=100;++i){
+		fwrite( &blankClient, sizeof( struct clientData ), 1, filePtr ); }//endfor
+      	fclose ( filePtr ); // fclose closes the file
+    } // end else
+}//endmain
