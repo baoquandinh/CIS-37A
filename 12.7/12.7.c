@@ -31,43 +31,35 @@ int main (void)
 {
 	ListNodePtr startPtr = NULL; //Initalize 1st list with no nodes
 	ListNodePtr secondPtr = NULL; //Initilizes 2nd list with no nodes
+	ListNodePtr mergerPtr = NULL; //Initilizes 3rd list that is merged
 
 	unsigned int choice; //User choice
 	int node;
 	instructions();
-	printf("%s", "? ");
+	printf("%s", "Choice: ");
 	scanf("%u", &choice);
 
-	while (choice != 3)
+	while (choice != 4)
 	{
 		switch (choice)
 		{
 			case 1:	
-					printf("Enter an integer: ");
+					printf("Enter an integer into 1st List: ");
 					scanf("\n%d", &node);
-					insert(&startPtr, node); //Insert node into list
+					insert(&startPtr, node); //Insert node into first list
+					insert(&mergerPtr, node); //Insert node into merge list
 					printList(startPtr);
 					break;
-			case 2:	
-					if(!isEmpty(startPtr))
-					{
-						printf("%s","Enter integer to be deleted: ");
-						scanf("\n%d", &node);
-						if (deleteList(&startPtr, node))
-						{
-							printf("%d deleted.\n", node );
-							printList(startPtr);
-						}
-						else
-						{
-							printf("%d not found.\n\n", node);
-						}
-						
-					}
-					else
-					{
-						puts("The list is empty.\n");
-					}
+			case 2:
+					printf("Enter an integer int 2nd List: ");
+					scanf("\n%d", &node);
+					insert(&secondPtr, node); //Insert node into second list
+					insert(&mergerPtr, node);
+					printList(secondPtr);
+					break;
+			case 3:	
+					puts("Here is the merged list: ");
+					printList(mergerPtr);
 					break; //Remove nodes from list
 			default:
 					puts("Invalid choice.");
@@ -75,7 +67,7 @@ int main (void)
 					break;
 		}
 
-		printf("?");
+		printf("Choice: ");
 		scanf("%u", &choice);
 	}
 
@@ -87,9 +79,10 @@ int main (void)
 void instructions (void)
 {
 	puts("Enter your choice:");
-	puts("1 to insert an element into the list");
-	puts("2 to remove an element from the list");
-	puts("3 to end");
+	puts("1 to insert an element into the first list");
+	puts("2 to insert an element into the second list");
+	puts("3 to merge");
+	puts("4 to end");
 }
 
 //Insert function
@@ -132,44 +125,6 @@ void insert ( ListNodePtr *sPtr, int value)
 	}
 }
 
-
-char deleteList ( ListNodePtr *sPtr, int value)
-{
-	ListNodePtr previousPtr;
-	ListNodePtr currentPtr;
-	ListNodePtr tempPtr;
-
-
-	//delete first node
-	if (value == (*sPtr)->data)
-	{
-		tempPtr = *sPtr; //Holds onto node being removed
-		*sPtr = (*sPtr)->nextPtr; //de-thread the node
-		free(tempPtr); //Free the de-threaded node
-		return value;
-	}
-	else
-	{
-		previousPtr = *sPtr;
-		currentPtr = (*sPtr)->nextPtr;
-
-		while (currentPtr != NULL && currentPtr->data != value)
-		{
-			previousPtr = currentPtr; 
-			currentPtr = currentPtr->nextPtr;
-		}
-
-		//delete node at currentPtr
-		if (currentPtr != NULL)
-		{
-			tempPtr = currentPtr;
-			previousPtr->nextPtr = currentPtr->nextPtr;
-			free(tempPtr);
-			return value;
-		}
-	}
-	return '\0';
-}
 
 int isEmpty (ListNodePtr sPtr)
 {
