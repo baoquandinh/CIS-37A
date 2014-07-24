@@ -1,6 +1,6 @@
 /*
 Name: Baoquan Dinh
-Due Date: July 23, 2014
+Due Date: July 24, 2014
 System Used: Max OSX
 Algorithm :
 */
@@ -19,8 +19,8 @@ typedef ListNode *ListNodePtr;
 
 //3
 //Function prototypes for first list
-void insert ( ListNodePtr *sPtr, char value);
-char deleteList ( ListNodePtr *sPtr, char value);
+void insert ( ListNodePtr *sPtr, int value);
+char deleteList ( ListNodePtr *sPtr, int value);
 int isEmpty ( ListNodePtr sPtr);
 void printList ( ListNodePtr currentPtr);
 void instructions ( void );
@@ -33,7 +33,7 @@ int main (void)
 	ListNodePtr secondPtr = NULL; //Initilizes 2nd list with no nodes
 
 	unsigned int choice; //User choice
-	char node;
+	int node;
 	instructions();
 	printf("%s", "? ");
 	scanf("%u", &choice);
@@ -43,24 +43,24 @@ int main (void)
 		switch (choice)
 		{
 			case 1:	
-					printf("Enter a character: ");
-					scanf("\n%c", &node);
+					printf("Enter an integer: ");
+					scanf("\n%d", &node);
 					insert(&startPtr, node); //Insert node into list
 					printList(startPtr);
 					break;
 			case 2:	
 					if(!isEmpty(startPtr))
 					{
-						printf("%s","Enter character to be deleted: ");
-						scanf("\n%c", &node);
+						printf("%s","Enter integer to be deleted: ");
+						scanf("\n%d", &node);
 						if (deleteList(&startPtr, node))
 						{
-							printf("%c deleted.\n", node );
+							printf("%d deleted.\n", node );
 							printList(startPtr);
 						}
 						else
 						{
-							printf("%c not found.\n\n", node);
+							printf("%d not found.\n\n", node);
 						}
 						
 					}
@@ -93,7 +93,7 @@ void instructions (void)
 }
 
 //Insert function
-void insert ( ListNodePtr *sPtr, char value)
+void insert ( ListNodePtr *sPtr, int value)
 {
 	ListNodePtr newPtr; //Pointer to a new node
 	ListNodePtr previousPtr;
@@ -133,7 +133,7 @@ void insert ( ListNodePtr *sPtr, char value)
 }
 
 
-char deleteList ( ListNodePtr *sPtr, char value)
+char deleteList ( ListNodePtr *sPtr, int value)
 {
 	ListNodePtr previousPtr;
 	ListNodePtr currentPtr;
@@ -188,7 +188,7 @@ void printList (ListNodePtr currentPtr)
 		puts("The list is: ");
 		while (currentPtr != NULL)
 		{
-			printf("%c --> ", currentPtr -> data );
+			printf("%d --> ", currentPtr -> data );
 			currentPtr = currentPtr->nextPtr;
 		}
 
