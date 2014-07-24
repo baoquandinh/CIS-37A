@@ -8,7 +8,7 @@ Algorithm :
 #include <stdio.h>
 #include <stdlib.h>
 
-//1
+//
 struct listNode
 {
 	char data;
@@ -17,7 +17,7 @@ struct listNode
 typedef struct listNode ListNode;
 typedef ListNode *ListNodePtr;
 
-//3
+//
 //Function prototypes for first list
 void insert ( ListNodePtr *sPtr, char value);
 char deleteList ( ListNodePtr *sPtr, char value);
